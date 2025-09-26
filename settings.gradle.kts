@@ -10,6 +10,7 @@ plugins {
     id("com.gradle.develocity") version "4.1.1"
     id("com.gradle.common-custom-user-data-gradle-plugin") version "2.2"
     id("com.fueledbycaffeine.spotlight") version "1.3.3"
+    id("org.gradle.toolchains.foojay-resolver") version "1.0.0"
 }
 rootProject.name = "AndroidCacheFixPluginAGP9"
 develocity {
