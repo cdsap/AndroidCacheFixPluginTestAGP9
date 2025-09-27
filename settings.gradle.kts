@@ -80,12 +80,4 @@ include (":model:push-contact")
 include (":app:app")
 
 
-toolchainManagement {
-    jvm { 
-        javaRepositories {
-            repository("foojay") { 
-                resolverClass = org.gradle.toolchains.foojay.FoojayToolchainResolver::class.java
-            }
-        }
-    }
-}
+ 

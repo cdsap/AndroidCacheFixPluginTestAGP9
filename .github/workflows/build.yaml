@@ -89,7 +89,7 @@ jobs:
           distribution: ${{ matrix.distribution }}
           java-version: ${{ matrix.java-version }}
       - name: Execute Gradle build
-        run: ./gradlew assembleDebug -Dscan.tag.H${{ matrix.java-version }}-${{ matrix.distribution }} -Dscan.tag.no_plugin_agp9
+        run: ./gradlew assembleDebug -Dscan.tag.H${{ matrix.java-version }}-${{ matrix.distribution }} -Dscan.tag.no_plugin_jdk23
         env:
           DEVELOCITY_ACCESS_KEY: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
           AGENT_JAVA_VERSION: "${{ matrix.java-version }}-${{ matrix.distribution }}"
