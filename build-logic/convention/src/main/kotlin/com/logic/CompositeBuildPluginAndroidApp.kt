@@ -48,7 +48,7 @@ class CompositeBuildPluginAndroidApp : Plugin<Project> {
             }
             target.extensions.getByType(org.gradle.api.plugins.JavaPluginExtension::class.java).apply {
                 toolchain.languageVersion.set(org.gradle.jvm.toolchain.JavaLanguageVersion.of(23))
-                toolchain.vendor.set(VendorResolver().detectCurrentVendor())
+                
             }
             // Hilt missing Java Toolchain support https://github.com/google/dagger/issues/4623
             val toolchains = target.extensions.getByType(JavaToolchainService::class.java)
