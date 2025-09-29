@@ -7,7 +7,7 @@ plugins {
     alias(libs.plugins.kotlin.ksp) apply false
     alias(libs.plugins.hilt) apply false
     id("com.autonomousapps.dependency-analysis") version "2.19.0" apply true
-    id("org.gradle.android.cache-fix") version "3.0.1" apply false
+    id("org.gradle.android.cache-fix") version "3.0.2" apply false
 }
 
 subprojects {
