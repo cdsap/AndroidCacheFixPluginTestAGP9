@@ -43,11 +43,11 @@ class CompositeBuildPluginAndroidApp : Plugin<Project> {
                 }
             }
             target.extensions.getByType(KotlinAndroidProjectExtension::class.java).apply {
-                    jvmToolchain(17)
+                    jvmToolchain(21)
 
             }
             target.extensions.getByType(org.gradle.api.plugins.JavaPluginExtension::class.java).apply {
-                toolchain.languageVersion.set(org.gradle.jvm.toolchain.JavaLanguageVersion.of(17))
+                toolchain.languageVersion.set(org.gradle.jvm.toolchain.JavaLanguageVersion.of(21))
                 
             }
             // Hilt missing Java Toolchain support https://github.com/google/dagger/issues/4623
@@ -57,7 +57,7 @@ class CompositeBuildPluginAndroidApp : Plugin<Project> {
                  .configureEach {
                      javaCompiler.set(
                          toolchains.compilerFor {
-                             languageVersion.set(JavaLanguageVersion.of(17))
+                             languageVersion.set(JavaLanguageVersion.of(21))
                          }
                      )
                  }
